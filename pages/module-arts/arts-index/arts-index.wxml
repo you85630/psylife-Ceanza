@@ -1,0 +1,87 @@
+<!--pages/module-arts/arts-index/arts-index.wxml-->
+<view class="index">
+  <image class="img-bg" src="http://static.silaishi.com/wechat/wximgs/bg-01.png"></image>
+  <view class="border">这个是圆</view>
+  <view class="index-msg">
+    <view class="title">艺术成长值</view>
+    <view class="invest">{{user.art_grow_value}}</view>
+    <view class="info">{{user.art_level_name}}</view>
+    <view class="name">{{user.u_name}}同学的艺术发展分析</view>
+  </view>
+</view>
+
+<!-- 九宫格 -->
+<view class="sudoku">
+  <view class="sudoku-li">
+    <view class="fa fa-clock-o"></view>
+    <view class="li-title">最近登录</view>
+    <view class="li-data">{{user.last_login}}</view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-star"></view>
+    <view class="li-title">艺术等级</view>
+    <view class="li-data">LV {{user.art_level}}</view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-eye"></view>
+    <view class="li-title">精品艺术奖赏</view>
+    <view class="li-data">{{user.appreciated_jing_nums}}/{{user.jing_nums}}
+      <text class="gray">件</text>
+    </view>
+    <navigator url="" class="btn" hover-class="none">点击查看详情</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-image"></view>
+    <view class="li-title">个人作品发表数</view>
+    <view class="li-data">{{user.my_works_publish_nums}}
+      <text class="gray">件</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-diamond"></view>
+    <view class="li-title">个人作品精品数</view>
+    <view class="li-data">{{user.my_works_jing_nums}}
+      <text class="gray">件</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-pencil-square-o"></view>
+    <view class="li-title">个人评论加精数</view>
+    <view class="li-data">{{user.my_comments_jing_nums}}
+      <text class="gray">条</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-copy"></view>
+    <view class="li-title">作品鉴赏数</view>
+    <view class="li-data">{{user.appreciated_nums}}
+      <text class="gray">件</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-commenting"></view>
+    <view class="li-title">评论发表数</view>
+    <view class="li-data">{{user.comments_publish_nums}}
+      <text class="gray">条</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-check-square-o"></view>
+    <view class="li-title">答案正确数</view>
+    <view class="li-data">
+      <text class="gray">答对</text>
+      <text class="green">{{user.answer_right_nums}}</text>
+      <text class="gray">个</text>
+      <text class="gray"> 答错</text>
+      <text class="red">{{user.answer_wrong_nums}}</text>
+      <text class="gray">个</text>
+    </view>
+  </view>
+</view>
+
+<!-- 分享 -->
+<view class="share">
+  <button class="btn" hover-class="none" open-type="share">点击分享到朋友圈晒一晒我的阅读成绩单
+    <text class="fa fa-share-alt-square"></text>
+  </button>
+</view>

@@ -1,0 +1,95 @@
+<!--pages/module-badge/badge-index/badge-index.wxml-->
+<view class="index">
+  <image class="img-bg" src="http://static.silaishi.com/wechat/wximgs/bg-01.png"></image>
+  <view class="border">这个是圆</view>
+  <view class="index-msg">
+    <view class="title">行为表现值</view>
+    <view class="title">成长值</view>
+    <view class="invest">{{user.jf}}</view>
+    <view class="name">{{user.today_star_name}}同学的徽章发展分析</view>
+  </view>
+</view>
+
+<view class="report">
+  <navigator url="" class="report-li" hover-class="none">
+    <text class="name">成长报告</text>
+    <text class="fa fa-chevron-right"></text>
+  </navigator>
+  <navigator url="" class="report-li" hover-class="none">
+    <text class="name">整体情况</text>
+    <text class="fa fa-chevron-right"></text>
+  </navigator>
+</view>
+
+<!-- 九宫格 -->
+<view class="sudoku">
+  <view class="sudoku-li">
+    <view class="fa fa-calendar-plus-o"></view>
+    <view class="li-title">今日获章数</view>
+    <view class="li-data">{{user.today_num}}
+      <text class="gray">枚</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-comments"></view>
+    <view class="li-title">家长回复数</view>
+    <view class="li-data">{{user.reply_num}}/{{user.total}}</view>
+    <navigator url="" class="btn" hover-class="none">点击查看详情记录</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-users"></view>
+    <view class="li-title">关注TA的老师</view>
+    <view class="li-data">{{user.tech_num}}
+      <text class="gray">名</text>
+    </view>
+    <navigator url="" class="btn" hover-class="none">点击查看教师列表</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-line-chart"></view>
+    <view class="li-title">累计获章数</view>
+    <view class="li-data">{{user.total}}
+      <text class="gray">枚</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-smile-o"></view>
+    <view class="li-title">奖励章枚数</view>
+    <view class="li-data">{{user.good}}
+      <text class="gray">枚</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-frown-o"></view>
+    <view class="li-title">批评章枚数</view>
+    <view class="li-data">{{user.bad}}
+      <text class="gray">枚</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-pie-chart"></view>
+    <view class="li-title">成就进度</view>
+    <view class="li-data">{{user.get_cj_num}}/{{user.total_cj_num}}</view>
+    <navigator url="" class="btn" hover-class="none">点击查看我的成就</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-bar-chart"></view>
+    <view class="li-title">上榜次数</view>
+    <view class="li-data">{{user.star_time}}
+      <text class="gray">次</text>
+    </view>
+    <navigator url="" class="btn" hover-class="none">点击查看排行榜</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-thumbs-up"></view>
+    <view class="li-title">突出表现</view>
+    <view class="li-none">占位符</view>
+    <navigator url="" class="btn" hover-class="none">点击查看突出表现</navigator>
+  </view>
+</view>
+
+<!-- 分享 -->
+<view class="share">
+  <button class="btn" hover-class="none" open-type="share">点击分享到朋友圈晒一晒我的阅读成绩单
+    <text class="fa fa-share-alt-square"></text>
+  </button>
+</view>

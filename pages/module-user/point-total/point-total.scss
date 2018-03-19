@@ -1,0 +1,91 @@
+.top-show {
+  padding: 30rpx;
+  background-color: #fff;
+}
+// 金币收支
+.show-box {
+  margin: 0 auto;
+  width: 300rpx;
+  height: 300rpx;
+  background: linear-gradient(145deg, #ffde62, #f9d071, #ffbb81);
+  box-shadow: 0 20rpx 50rpx #ccc;
+  text-align: center;
+  .box-title {
+    padding-top: 80rpx;
+    color: #666;
+    font-size: 40rpx;
+  }
+  .box-text {
+    padding-top: 40rpx;
+    color: #666;
+    font-size: 30rpx;
+  }
+}
+.text-show {
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+  .li {
+    width: 30%;
+    border-right: 4rpx solid #f7caa8;
+    text-align: center;
+    &:last-child {
+      border-right: none;
+    }
+    .li-title,
+    .li-text {
+      font-size: 30rpx;
+    }
+    .li-text {
+      margin-top: 10rpx;
+    }
+  }
+  .active {
+    .li-title,
+    .li-text {
+      color: #f7caa8;
+    }
+  }
+}
+
+// 收支明细
+.point-total {
+  margin-top: 20rpx;
+  height: 701rpx;
+  background-color: #fff;
+  .time,
+  .describe,
+  .use {
+    display: block;
+    font-size: 26rpx;
+  }
+  .time {
+    width: 35%;
+  }
+  .describe {
+    width: 50%;
+  }
+  .use {
+    width: 15%;
+    text-align: right;
+  }
+  .title,
+  .content {
+    display: flex;
+    padding: 16rpx;
+    border-bottom: 1px solid #eee;
+  }
+  .content {
+    .time,
+    .describe,
+    .use {
+      font-size: 24rpx;
+    }
+    .time {
+      color: #999;
+    }
+    .use {
+      color: #f7caa8;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.bind-phone {
+  background-color: #fff;
+}
+.title-name {
+  padding: 20rpx 30rpx;
+  font-size: 30rpx;
+}
+.bind-li {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-top: 2rpx solid #eee;
+  .name {
+    width: 20%;
+    color: #666;
+    font-size: 26rpx;
+  }
+  .id {
+    width: 80%;
+    font-size: 26rpx;
+  }
+  .placeholder {
+    color: #ccc;
+    font-size: 26rpx;
+  }
+}
+.post {
+  margin: 0 30rpx;
+  padding: 10rpx 0;
+  border-radius: 4rpx;
+  background-color: #c5c5c5;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+}
+.poston {
+  background-color: #3c9ffc;
+  color: #fff;
+}
+.deal {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+  padding: 0 30rpx;
+  .fa {
+    margin-right: 4rpx;
+    color: #3c9ffc;
+    font-size: 26rpx;
+  }
+  .fa-square-o {
+    margin-top: 2rpx;
+    color: #000;
+  }
+  .read {
+    font-size: 26rpx;
+  }
+  .alink {
+    color: #3c9ffc;
+    font-size: 26rpx;
+  }
+}
+.backcard {
+  padding: 30rpx;
+  text-align: right;
+  .text {
+    color: #3c9ffc;
+    font-size: 26rpx;
+  }
+}
+.cardimg {
+  padding: 30rpx;
+  text-align: center;
+  .name {
+    margin-bottom: 20rpx;
+    color: #999;
+    font-size: 26rpx;
+  }
+  .card-img {
+  }
+}

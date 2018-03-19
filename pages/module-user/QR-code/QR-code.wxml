@@ -1,0 +1,4 @@
+<!--pages/QR-code/QR-code.wxml-->
+<view class="img-box">
+  <canvas style="width: 686rpx;height: 686rpx;" canvas-id="mycanvas"/>
+</view>

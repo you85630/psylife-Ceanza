@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/module-user/index/index",
+    "pages/module-user/student-list/student-list",
+    "pages/module-user/add-student/add-student",
+    "pages/module-user/card/card",
+    "pages/module-user/point-total/point-total",
+    "pages/module-user/bind-phone/bind-phone",
+    "pages/module-user/QR-code/QR-code",
+    "pages/module-read/read-index/read-index",
+    "pages/module-read/read-now/read-now",
+    "pages/module-read/read-analyze/read-analyze",
+    "pages/module-read/school-now/school-now",
+    "pages/module-arts/arts-index/arts-index",
+    "pages/module-course/course-index/course-index",
+    "pages/module-badge/badge-index/badge-index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小思成长日记",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,84 @@
+<!--pages/module-course/course-index/course-index.wxml-->
+<view class="index">
+  <image class="img-bg" src="http://static.silaishi.com/wechat/wximgs/bg-01.png"></image>
+  <view class="border">这个是圆</view>
+  <view class="index-msg">
+    <view class="title">课程成长值</view>
+    <view class="invest">{{user.course_grow_value}}</view>
+    <view class="info">{{user.course_level_name}}</view>
+    <view class="name">{{user.u_name}}同学的课程发展分析</view>
+  </view>
+</view>
+
+<!-- 九宫格 -->
+<view class="sudoku">
+  <view class="sudoku-li">
+    <view class="fa fa-clock-o"></view>
+    <view class="li-title">最近登录</view>
+    <view class="li-data">{{user.last_login_time}}</view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-star"></view>
+    <view class="li-title">课程等级</view>
+    <view class="li-data">LV {{user.course_level}}</view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-book"></view>
+    <view class="li-title">课时完成数</view>
+    <view class="li-data">{{user.finished_detail_num}}
+      <text class="gray">节</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-clipboard"></view>
+    <view class="li-title">正在进行的课程数</view>
+    <view class="li-data">{{user.learning_lesson_num}}
+      <text class="gray">门</text>
+    </view>
+    <navigator url="" class="btn" hover-class="none">点击查看课程详情</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-thumbs-up"></view>
+    <view class="li-title">已经完成的课程数</view>
+    <view class="li-data">{{user.finished_lesson_num}}
+      <text class="gray">张</text>
+    </view>
+    <navigator url="" class="btn" hover-class="none">点击查看课程详情</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-diamond"></view>
+    <view class="li-title">已经获得的证书数</view>
+    <view class="li-data">{{user.certificate_num}}
+      <text class="gray">张</text>
+    </view>
+    <navigator url="" class="btn" hover-class="none">点击查看证书详情</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-commenting"></view>
+    <view class="li-title">评论发表数</view>
+    <view class="li-data">{{user.evaluate_num}}
+      <text class="gray">条</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-list-ol"></view>
+    <view class="li-title">作业完成数</view>
+    <view class="li-data">{{user.works_num}}
+      <text class="gray">条</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-pencil-square-o"></view>
+    <view class="li-title">加精作业数</view>
+    <view class="li-data">{{user.good_works_num}}
+      <text class="gray">条</text>
+    </view>
+  </view>
+</view>
+
+<!-- 分享 -->
+<view class="share">
+  <button class="btn" hover-class="none" open-type="share">点击分享到朋友圈晒一晒我的阅读成绩单
+    <text class="fa fa-share-alt-square"></text>
+  </button>
+</view>

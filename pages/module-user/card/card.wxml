@@ -1,0 +1,63 @@
+<!--pages/card/card.wxml-->
+<!-- 卡片情况 -->
+<view class="card">
+  <view class="card-content">
+    <image class="card-bg" src="http://static.silaishi.com/wechat/wximgs/card-1.png"></image>
+    <view class="card-box">
+      <view class="li">
+        <text class="title">学校：</text>
+        <text class="content">{{cardContent.s_name}}</text>
+      </view>
+      <view class="li">
+        <text class="title">班级：</text>
+        <text class="content">{{cardContent.c_name}}</text>
+      </view>
+      <view class="li">
+        <text class="title">姓名：</text>
+        <text class="content">{{cardContent.u_name}}</text>
+      </view>
+      <view class="li">
+        <text class="title">一卡通号：</text>
+        <text class="content">{{cardContent.gu_code}}</text>
+      </view>
+      <view class="li">
+        <text class="title">验证码：</text>
+        <text class="content">{{cardContent.b_pass_2}}</text>
+      </view>
+    </view>
+  </view>
+  <navigator hover-class="none" url="/pages/module-user/QR-code/QR-code?gucode={{cardContent.gu_code}}" class="look-card">点击查看二维码<text class="fa fa-angle-right"></text></navigator>
+</view>
+
+<!-- 个人信息设置 -->
+<view class="user-info">
+  <view class="li">
+    <view class="name">
+      <text class="fa fa-database"></text>我的小思金币</view>
+    <navigator hover-class="none" url="/pages/module-user/point-total/point-total?Uid={{lookCard.Uid}}&Sid={{lookCard.Sid}}" class="goto">{{cardContent.dye}}
+      <text class="fa fa-angle-right"></text>
+    </navigator>
+  </view>
+  <view class="li">
+    <view class="name"><text class="fa fa-id-badge"></text>手机绑定</view>
+    <text class="goto" wx:if="{{cardContent.mobile}}">{{cardContent.mobile}}</text>
+    <navigator hover-class="none" url="/pages/module-user/bind-phone/bind-phone" class="goto" wx:else>绑定手机
+      <text class="fa fa-angle-right"></text>
+    </navigator>
+  </view>
+  <view class="li">
+    <view class="name">
+      <text class="fa fa-cogs"></text>忘记小思学院密码？</view>
+    <navigator hover-class="none" url="/pages/module-user/bind-phone/bind-phone?mobile={{cardContent.mobile}}" class="goto">重置密码
+      <text class="fa fa-angle-right"></text>
+    </navigator>
+  </view>
+</view>
+
+<!-- 相关介绍 -->
+<view class="what">
+  <text class="what-title">忘记小思学院密码怎么办？</text>
+  <text class="what-text">点击上方“重置密码”，根据提示操作，就可以重新设置密码。设置成功后，登录小思学院平台（小思阅读、小思艺术、小思课程）就可以使用新密码啦~</text>
+  <text class="what-title">要更换绑定的手机号怎么办？</text>
+  <text class="what-text">请登录小思学院平台（小思阅读、小思艺术、小思课程），根据提示操作，就可以更换绑定密码啦~</text>
+</view>

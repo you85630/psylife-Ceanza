@@ -1,0 +1,61 @@
+.list {
+  background-color: #fff;
+  .li {
+    margin-top: 4rpx;
+    &:first-child {
+      margin-top: 0;
+    }
+    .name {
+      padding: 20rpx 30rpx;
+      background-color: #a0cdfe;
+      font-size: 30rpx;
+    }
+    .main {
+      .info {
+        display: flex;
+        padding: 20rpx 30rpx;
+        .cover {
+          box-sizing: border-box;
+          margin-right: 20rpx;
+          width: 200rpx;
+          height: auto;
+          border: 4rpx solid #eee;
+        }
+        .msg {
+          width: 492rpx;
+          font-size: 24rpx;
+          .msg-title {
+            color: #999;
+          }
+          .grade {
+            color: #ff9966;
+            font-size: 34rpx;
+            .msg-title {
+              font-size: 24rpx;
+            }
+          }
+          .buy {
+            .btn {
+              padding: 2rpx 20rpx;
+              border-radius: 4rpx;
+              background-color: #3c9ffc;
+              color: #fff;
+              font-size: 22rpx;
+            }
+          }
+        }
+      }
+      .intro {
+        padding: 20rpx 30rpx;
+        border-top: 4rpx solid #eee;
+        font-size: 24rpx;
+        .intro-title {
+          color: #000;
+        }
+        .text {
+          color: #999;
+        }
+      }
+    }
+  }
+}

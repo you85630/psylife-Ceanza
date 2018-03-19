@@ -1,0 +1,82 @@
+// 默认字体大小：26rpx
+// 小号字体：22rpx
+// 大号字体：30rpx
+
+// 卡片情况
+.card {
+  padding: 30rpx;
+  background-color: #fff;
+}
+.card-content {
+  position: relative;
+  .card-bg {
+    width: 100%;
+  }
+  .card-box {
+    position: absolute;
+    bottom: 30rpx;
+    left: 5%;
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 4rpx;
+    background-color: rgba($color: #fff, $alpha: .6);
+    .li {
+      display: flex;
+      box-sizing: border-box;
+      padding: 6rpx 10rpx;
+      border-bottom: 2rpx solid #ccc;
+      &:last-child {
+        border-bottom: none;
+      }
+      .title {
+        width: 40%;
+        color: #666;
+        text-align: right;
+        font-size: 26rpx;
+      }
+      .content {
+        font-size: 26rpx;
+      }
+    }
+  }
+}
+.look-card {
+  margin-top: 30rpx;
+  color: #666;
+  text-align: right;
+  font-size: 26rpx;
+  .fa {
+    margin-left: 4rpx;
+  }
+}
+
+// 个人信息设置
+.user-info {
+  margin-top: 20rpx;
+  background-color: #fff;
+  .li {
+    display: flex;
+    justify-content: space-between;
+    padding: 14rpx 30rpx;
+    border-bottom: 2rpx solid #eee;
+    &:last-child {
+      border-bottom: none;
+    }
+    .name {
+      color: #666;
+      font-size: 26rpx;
+      .fa {
+        width: 40rpx;
+        color: #000;
+        text-align: center;
+      }
+    }
+    .goto {
+      color: #999;
+      font-size: 26rpx;
+      .fa {
+        margin-left: 4rpx;
+      }
+    }
+  }
+}

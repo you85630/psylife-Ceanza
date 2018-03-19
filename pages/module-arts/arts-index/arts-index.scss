@@ -1,0 +1,125 @@
+$theme: #f6b40f;
+.index {
+  position: relative;
+  .img-bg {
+    width: 100%;
+  }
+  .border {
+    position: absolute;
+    top: 50rpx;
+    left: 225rpx;
+    width: 300rpx;
+    height: 300rpx;
+    border: 6rpx solid $theme;
+    border-radius: 500rpx;
+    background-color: transparent;
+    &::before {
+      position: absolute;
+      top: 15rpx;
+      right: 60rpx;
+      z-index: 1;
+      width: 20rpx;
+      height: 20rpx;
+      border-radius: 500rpx;
+      background-color: $theme;
+      box-shadow: 0 0 10rpx 10rpx $theme;
+      content: '';
+    }
+    &:after {
+      position: absolute;
+      top: 40rpx;
+      right: 0;
+      width: 80rpx;
+      height: 16rpx;
+      background-color: #151f37;
+      content: '';
+      transform: rotate(50deg);
+    }
+  }
+}
+
+.index-msg {
+  position: absolute;
+  top: 110rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  .title {
+    color: #fff;
+    font-size: 36rpx;
+  }
+  .invest {
+    margin: 12rpx 0;
+    color: #dedd94;
+    font-size: 60rpx;
+  }
+  .info {
+    color: #fff;
+    font-size: 36rpx;
+  }
+  .name {
+    padding-top: 70rpx;
+    color: $theme;
+    font-size: 36rpx;
+  }
+}
+
+.sudoku {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+
+.sudoku-li {
+  box-sizing: border-box;
+  padding: 20rpx 10rpx;
+  width: 33.3%;
+  border-right: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+  text-align: center;
+  &:nth-child(3n) {
+    border-right: none;
+  }
+  .fa {
+    color: $theme;
+    font-size: 60rpx;
+  }
+  .li-title {
+    margin: 20rpx 0;
+    font-size: 30rpx;
+  }
+  .li-data {
+    color: #ff9966;
+    font-size: 22rpx;
+  }
+  .btn {
+    margin-top: 20rpx;
+    padding: 2rpx 0;
+    border-radius: 4rpx;
+    background-color: #3c9ffc;
+    color: #fff;
+    font-size: 22rpx;
+  }
+  .gray {
+    color: #999;
+  }
+  .green {
+    color: #339966;
+  }
+  .red {
+    color: #f00;
+  }
+}
+
+.share {
+  padding: 40rpx 20rpx;
+  background-color: #fff;
+  .btn {
+    border: none;
+    border-radius: 4rpx;
+    background-color: #3c9ffc;
+    color: #fff;
+    font-size: 30rpx;
+  }
+}

@@ -1,0 +1,38 @@
+<!--pages/add-student/add-student.wxml-->
+<view class="bind-phone">
+    <view class="title-name">请对照小思一卡通输入</view>
+    <view class="bind-li">
+      <text class="name">一卡通号</text>
+      <input type="number" bindinput="getCode" class="id" placeholder-class="placeholder" placeholder="请输入您的手机号"/>
+    </view>
+    <view class="bind-li">
+      <text class="name">验证码</text>
+      <input type="text"  bindinput="getPass" class="id" placeholder-class="placeholder" placeholder="请输入验证码" />
+    </view>
+  </view>
+  <view class="deal" bindtap="select">
+    <text class="fa {{active?'fa-check-square':'fa-square-o'}}"></text>
+    <text class="read">我阅读并接受</text>
+    <navigator class="alink" hover-class="none" url="">《小思成长日记用户服务协议》</navigator>
+  </view>
+  <view class="post {{active?'poston':''}}" bindtap="bindUser">下一步</view>
+
+  <view class="backcard">
+      <navigator class="text" hover-class="none" url="">找回小思一卡通</navigator>
+  </view>
+
+  <view class="cardimg">
+    <view class="name">示例</view>
+    <image class="card-img" src="http://static.silaishi.com/wechat/wximgs/card-2.png"></image>
+  </view>
+
+  <!-- 弹窗 -->
+<view class="alert-bg" wx:if="{{addMsg.main}}">
+  <view class="alert">
+    <view class="title-name">提示</view>
+    <view class="alert-content">{{addMsg.main}}</view>
+    <view class="alert-btn">
+      <text class="alert-center" bindtap="bindStar">关闭</text>
+    </view>
+  </view>
+</view>

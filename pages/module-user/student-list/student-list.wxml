@@ -1,0 +1,44 @@
+<!--pages/student-list/student-list.wxml-->
+<!-- 学生列表 -->
+<view class="student-list" wx:for="{{userList}}" wx:key="index">
+  <view class="list-left">
+    <view class="left-li">
+      <text class="fa fa-user-circle-o"></text>
+      <text class="title">学生项目：</text>
+      <text class="text">{{item.u_name}}</text>
+    </view>
+    <view class="left-li">
+      <text class="fa fa-address-card-o"></text>
+      <text class="title">一卡通号：</text>
+      <text class="text">{{item.gu_code}}</text>
+    </view>
+  </view>
+  <view class="list-right">
+    <text class="fa fa-plus" bindtap="alertOpen" data-text="{{index}}"></text>
+    <navigator hover-class="none" class="card" url="/pages/module-user/index/index?uid={{item.u_id}}">查看成长档案</navigator>
+  </view>
+</view>
+
+<!-- 绑定按钮 -->
+<view class="id-bind">
+  <navigator hover-class="none" class="btn" url="/pages/module-user/add-student/add-student">点此绑定小思一卡通</navigator>
+</view>
+<!-- 相关介绍 -->
+<view class="what">
+  <text class="what-title">什么是绑定小思一卡通？</text>
+  <text class="what-text">如您孩子有使用过任何小思系列产品（小思万里行、小思阅读、小思课程、小思艺术、小思徽章等），即视您为小思用户，请按照学校发给学生的“小思一卡通”上的信息进行操作。成功绑定后，便可以进行在线学习，可以即时接收和查阅孩子的成长档案，还可以查看电子小思一卡通、绑定手机、重置密码。</text>
+  <view class="what-text">（如果您不慎遗失卡片，请点<navigator hover-class="none" class="what-link" url="">找回小思一卡通</navigator>）</view>
+  <view class="what-text">提示：只有在小思成长日记微信号、小思学院或小思万里行中绑定过手机号，方可使用此方法找回一卡通；如从未绑定过手机号，有三种方式可以找回：1.班主任找回，请联系班主任老师；2.在小思成长日记微信号中留言，提交相应的身份证明；3.<navigator hover-class="none" class="what-link" url="">进入微店</navigator>，找到"补办小思一卡通"，按照要求购买并留言</view>
+</view>
+
+<!-- 弹窗 -->
+<view class="alert-bg" wx:if="{{alert}}">
+  <view class="alert">
+    <view class="title-name">提示</view>
+    <view class="alert-content">确认删除{{name}}</view>
+    <view class="alert-btn">
+      <text class="alert-left" bindtap="alertClose">取消</text>
+      <text class="alert-right" bindtap="removeList">删除</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/index/index.wxml-->
+<!-- 顶部切换学生 -->
+<view class="top-cut">
+  <navigator class="cut-left" hover-class="none" url="/pages/module-user/student-list/student-list">
+    <text class="fa fa-exchange"></text>
+    <text class="cut-name">切换学生</text>
+  </navigator>
+  <view class="cut-middle">
+    <view class="middle-li">
+      <text class="fa fa-user-circle-o"></text>
+      <text class="title">学生项目：</text>
+      <text class="text">{{user.u_name}}</text>
+    </view>
+    <view class="middle-li">
+      <text class="fa fa-address-card-o"></text>
+      <text class="title">一卡通号：</text>
+      <text class="text">{{user.gu_code}}</text>
+    </view>
+  </view>
+  <view class="cut-right">
+    <navigator hover-class="none" class="card" url="/pages/module-user/card/card?uid={{user.u_id}}">一卡通</navigator>
+  </view>
+</view>
+<!-- 小思学院相关产品 -->
+<view class="psy-list">
+  <navigator class="list" hover-class="none" wx:for="{{psyList}}" wx:key="index" url="{{item.linkto}}?uid={{user.u_id}}&sid={{user.s_id}}&cid={{user.c_id}}">
+    <view class="cover-box">
+      <image class="cover" mode="aspectFill" src="{{item.cover}}" wx:if="{{item.state}}"></image>
+      <image class="cover cover-none" mode="aspectFill" src="{{item.cover}}"  wx:else></image>
+    </view>
+    <text class="psy-name" wx:if="{{item.state}}">{{item.name}}</text>
+    <text class="psy-name name-none" wx:else>{{item.name}}</text>
+    <view class="psy-look" wx:if="{{item.state}}">查看更多<text class="fa fa-angle-right"></text></view>
+    <text class="psy-look" wx:else>即将上线</text>
+  </navigator>
+</view>
+
+<!-- 相关介绍 -->
+<view class="what">
+  <text class="what-title">什么是小思成长档案？</text>
+  <text class="what-text">每一位使用小思一卡通的孩子都拥有一个云端的独立帐户，这个帐户是一本高科技的成长日记，忠实记录着孩子点点滴滴的成长经历数据。小思学院记录孩子在课程学习，课外阅读、艺术素养时相关的成长印记；小思徽章记录教师对孩子日常在校行为表现的评价；小思万里行记录孩子的社会实践足迹。家长通过微信绑定小思一卡通，可以即时收到孩子的精彩表现提醒，查阅孩子成长档案，了解更多针对孩子个性发展的教育资源。让您可以更加全面地了解孩子的发展，发现独一无二的他/她</text>
+</view>

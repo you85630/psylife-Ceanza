@@ -1,0 +1,26 @@
+<!--pages/module-read/school-now/school-now.wxml-->
+<scroll-view class="list" scroll-y>
+  <view class="li" wx:for="{{list}}" wx:key="index">
+    <view class="name" bindtap="openInfo" data-text="{{index}}">{{index+1}}.《{{item.b_name}}》</view>
+    <view class="main" wx:if="{{open===index}}">
+        <view class="info">
+          <image src="{{item.b_img}}" class="cover"></image>
+          <view class="msg">
+            <view><text class="msg-title">作者：</text>{{item.b_author}}</view>
+            <view><text class="msg-title">出版社：</text>{{item.b_press}}</view>
+            <view><text class="msg-title">出版年：</text>{{item.b_pressyear}}</view>
+            <view><text class="msg-title">阅读量：</text>{{item.b_borrowcount}}</view>
+            <view><text class="msg-title">ISBN：</text>{{item.b_isbn}}</view>
+            <view class="grade">{{item.b_pingfen}}<text class="msg-title">分</text></view>
+            <view class="buy">
+              <text class="btn">点击购买</text>
+            </view>
+          </view>
+        </view>
+        <view class="intro">
+          <view class="intro-title">推荐语：</view>
+          <view class="text">{{item.b_info}}</view>
+        </view>
+    </view>
+  </view>
+</scroll-view>

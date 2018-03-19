@@ -1,0 +1,115 @@
+// 默认字体大小：26rpx
+// 小号字体：22rpx
+// 大号字体：30rpx
+// 顶部切换学生
+.top-cut {
+  display: flex;
+  align-items: flex-end;
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.cut-left {
+  margin-right: 20rpx;
+  padding-right: 20rpx;
+  border-right: 1px solid #ccc;
+  color: #3c9ffc;
+  text-align: center;
+  .fa {
+    display: block;
+    font-size: 50rpx;
+  }
+  .cut-name {
+    display: block;
+    font-size: 22rpx;
+  }
+}
+
+.cut-middle {
+  width: 62%;
+  .middle-li {
+    display: flex;
+    margin-top: 10rpx;
+    &:first-child {
+      margin-top: 0;
+    }
+    .fa {
+      width: 60rpx;
+      color: #999;
+      text-align: center;
+      font-size: 36rpx;
+    }
+    .title {
+      color: #999;
+      font-size: 26rpx;
+    }
+    .text {
+      font-size: 26rpx;
+    }
+  }
+}
+
+.cut-right {
+  padding-left: 20rpx;
+  .card {
+    padding: 2rpx 20rpx;
+    border-radius: 4rpx;
+    background-color: #3c9ffc;
+    color: #fff;
+    font-size: 22rpx;
+  }
+}
+
+// 小思学院相关产品
+.psy-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+  background-color: #fff;
+  .list {
+    box-sizing: border-box;
+    padding: 20rpx 0;
+    width: 33.3%;
+    border-bottom: 4rpx solid #f5f5f5;
+    text-align: center;
+    &:nth-child(3n-1) {
+      border-right: 4rpx solid #f5f5f5;
+      border-left: 4rpx solid #f5f5f5;
+    }
+    .cover-box {
+      margin: 0 auto;
+      width: 150rpx;
+      height: 150rpx;
+      border: 2rpx solid #eee;
+      border-radius: 50%;
+      .cover {
+        margin: 5%;
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+      }
+      .cover-none {
+        opacity: .4;
+      }
+    }
+    .psy-name {
+      display: block;
+      margin: 4rpx;
+      font-size: 30rpx;
+    }
+    .name-none {
+      color: #999;
+    }
+    .psy-look {
+      display: block;
+      color: #999;
+      font-size: 22rpx;
+      .fa {
+        margin-left: 4rpx;
+        vertical-align: -1rpx;
+        font-size: 30rpx;
+      }
+    }
+  }
+}

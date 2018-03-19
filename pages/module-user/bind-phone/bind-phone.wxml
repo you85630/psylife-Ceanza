@@ -1,0 +1,15 @@
+<!--pages/bind-phone/bind-phone.wxml-->
+<view class="bind-phone">
+  <view class="title-name">请输入手机号</view>
+  <view class="bind-li">
+    <text class="name">手机号</text>
+    <input type="number" class="id" placeholder-class="placeholder" placeholder="请输入您的手机号" value="{{number}}"/>
+  </view>
+  <view class="bind-li">
+    <text class="name">验证码</text>
+    <input type="text" class="code" placeholder-class="placeholder" placeholder="短信验证码" />
+    <text class="tips" wx:if="{{code}}">重新发送（{{code}}）</text>
+    <text class="tips" wx:else>获取短信验证码</text>
+  </view>
+</view>
+<view class="post {{active?'poston':''}}" bindtap="revampUser">提交</view>

@@ -1,0 +1,34 @@
+<!--pages/point-total/point-total.wxml-->
+<!-- 金币收支 -->
+<view class="top-show">
+  <view class="show-box">
+    <view class="box-title">金币余额</view>
+    <view class="box-text">{{collect.dye}}</view>
+  </view>
+  <view class="text-show">
+    <view class="li {{now?'active':''}}" bindtap="selectLi">
+      <view class="li-title">获得</view>
+      <view class="li-text">{{collect.dljjz}}</view>
+    </view>
+    <view class="li {{now?'':'active'}}" bindtap="selectLi">
+      <view class="li-title ">使用</view>
+      <view class="li-text ">{{collect.dljcz}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 收支明细 -->
+<scroll-view scroll-y scroll-with-animation class="point-total" bindscrolltolower="touchList">
+  <view class="title">
+    <text class="time">时间</text>
+    <text class="describe">描述</text>
+    <text class="use" wx:if="{{now}}">获得金币</text>
+    <text class="use" wx:else>使用金币</text>
+  </view>
+  <view class="content" wx:for="{{PointMx}}" wx:key="{{index}}">
+    <text class="time">{{item.cdate}}</text>
+    <text class="describe">{{item.dlx_name}}</text>
+    <text class="use" wx:if="{{now}}">+{{item.dje}}</text>
+    <text class="use" wx:else>-{{item.dje}}</text>
+  </view>
+</scroll-view>

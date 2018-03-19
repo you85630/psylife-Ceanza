@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "阅读能力分析",
+  "usingComponents": {
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
+  }
+}

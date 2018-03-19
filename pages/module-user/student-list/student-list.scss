@@ -1,0 +1,65 @@
+// 默认字体大小：26rpx
+// 小号字体：22rpx
+// 大号字体：30rpx
+
+// 学生列表
+.student-list {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  .list-left {
+    width: 70%;
+    .left-li {
+      display: flex;
+      margin-top: 10rpx;
+      &:first-child {
+        margin-top: 0;
+      }
+      .fa {
+        width: 60rpx;
+        color: #999;
+        text-align: center;
+        font-size: 36rpx;
+      }
+      .title {
+        color: #999;
+        font-size: 26rpx;
+      }
+      .text {
+        font-size: 26rpx;
+      }
+    }
+  }
+  .list-right {
+    width: 30%;
+    text-align: right;
+    .fa-plus {
+      font-size: 26rpx;
+      transform: rotate(45deg);
+    }
+    .card {
+      margin-top: 10rpx;
+      border-radius: 4rpx;
+      background-color: #3c9ffc;
+      color: #fff;
+      text-align: center;
+      font-size: 26rpx;
+    }
+  }
+}
+
+// 绑定按钮
+.id-bind {
+  text-align: center;
+  .btn {
+    display: block;
+    margin: 30rpx;
+    padding: 10rpx 0;
+    border-radius: 4rpx;
+    background-color: #3c9ffc;
+    color: #fff;
+    font-size: 30rpx;
+  }
+}

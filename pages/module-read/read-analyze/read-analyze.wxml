@@ -1,0 +1,35 @@
+<!--pages/module-read/read-analyze/read-analyze.wxml-->
+<view class="analyze">
+  <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ radar }}"></ec-canvas>
+</view>
+
+<view class="explain">
+  <view class="explain-tips">
+    <view class="fa fa-exclamation-circle"></view>
+    <view class="tips">只有完成精品书的阅读并参与书后答题才可以获得你的阅读能力分析噢</view>
+  </view>
+  <view class="explain-li">
+    <text class="li-title">复述：</text>
+    <text class="li-msg">能够辨别文中直接出现的细节、事实、事件、时间、和背景等信息，可以在非连续文本或图表中找到特定的信息</text>
+  </view>
+  <view class="explain-li">
+    <text class="li-title">鉴赏：</text>
+    <text class="li-msg">分析信息呈现方式，评论文学写作技巧在传达意义上的作用。</text>
+  </view>
+  <view class="explain-li">
+    <text class="li-title">评价：</text>
+    <text class="li-msg">评价书籍中论据的有效性和可信度。</text>
+  </view>
+  <view class="explain-li">
+    <text class="li-title">伸展：</text>
+    <text class="li-msg">能够通过文中信息进行推论和演绎，理解人物动机，推论出作者或角色的情绪或者态度。</text>
+  </view>
+  <view class="explain-li">
+    <text class="li-title">解释：</text>
+    <text class="li-msg">熟悉书中角色的性格，能够找出文章的中心句或者主要概念。</text>
+  </view>
+  <view class="explain-li">
+    <text class="li-title">重整：</text>
+    <text class="li-msg">能够整合观点，确定书籍主题，可以找到观点对应的论据。</text>
+  </view>
+</view>

@@ -1,0 +1,89 @@
+<!--pages/module-read/read-index/read-index.wxml-->
+<view class="index">
+  <image class="img-bg" src="http://static.silaishi.com/wechat/wximgs/bg-01.png"></image>
+  <view class="border">这个是圆</view>
+  <view class="index-msg">
+    <view class="title">阅读成长值</view>
+    <view class="invest">{{user.dcz}}</view>
+    <view class="info">{{user.level.info}}</view>
+    <view class="name">{{user.name}}同学的阅读发展分析</view>
+  </view>
+</view>
+
+<!-- 九宫格 -->
+<view class="sudoku">
+  <view class="sudoku-li">
+    <view class="fa fa-clock-o"></view>
+    <view class="li-title">最近登录</view>
+    <view class="li-data">{{user.login}}</view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-star"></view>
+    <view class="li-title">阅读等级</view>
+    <view class="li-data">LV {{user.level.invest}}</view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-book"></view>
+    <view class="li-title">阅读完成数</view>
+    <view class="li-data">{{user.finishedbook}}
+      <text class="gray">本</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-clipboard"></view>
+    <view class="li-title">正在阅读本数</view>
+    <view class="li-data">{{user.readingbook}}
+      <text class="gray">本</text>
+    </view>
+    <navigator url="/pages/module-read/read-now/read-now?uid={{user.u_id}}" class="btn" hover-class="none">点击查看阅读书籍列表</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-thumbs-up"></view>
+    <view class="li-title">学校推荐完成数</view>
+    <view class="li-data">{{user.sfinished}}/{{user.srecommend}}
+      <text class="gray">本</text>
+    </view>
+    <navigator url="/pages/module-read/school-now/school-now?uid={{user.u_id}}&sid={{user.s_id}}" class="btn" hover-class="none">点击查看推荐书籍列表</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-diamond"></view>
+    <view class="li-title">精品书籍完成数</view>
+    <view class="li-data">{{user.highfinished}}
+      <text class="gray">本</text>
+    </view>
+    <navigator url="/pages/module-read/read-analyze/read-analyze?uid={{user.u_id}}" class="btn" hover-class="none">点击查看阅读能力分析</navigator>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-commenting"></view>
+    <view class="li-title">书评发表数</view>
+    <view class="li-data">{{user.comm}}
+      <text class="gray">条</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-list-ol"></view>
+    <view class="li-title">书评加精数</view>
+    <view class="li-data">{{user.commrecommend}}
+      <text class="gray">条</text>
+    </view>
+  </view>
+  <view class="sudoku-li">
+    <view class="fa fa-pencil-square-o"></view>
+    <view class="li-title">答案正确数</view>
+    <view class="li-data">
+      <text class="gray">答对</text>
+      <text class="green">{{user.answercorrect}}</text>
+      <text class="gray">个</text>
+      <text class="gray"> 答错</text>
+      <text class="red">{{user.answertotal-user.answercorrect}}</text>
+      <text class="gray">个</text>
+    </view>
+  </view>
+</view>
+
+<!-- 分享 -->
+<view class="share">
+  <button class="btn" hover-class="none" open-type="share">点击分享到朋友圈晒一晒我的阅读成绩单
+    <text class="fa fa-share-alt-square"></text>
+  </button>
+</view>
