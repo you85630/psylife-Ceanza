@@ -1,53 +1,51 @@
 // pages/module-read/read-analyze/read-analyze.js
 const app = getApp()
-var wxCharts = require('../../../utils/wxcharts.js')
-var radarChart = null
+
+import * as echarts from '../../../ec-canvas/echarts'
+
+function getOption (value){
+  return {
+    radar: {
+      indicator: [
+        { name: '复述' },
+        { name: '解释' },
+        { name: '重整' },
+        { name: '伸展' },
+        { name: '评价' },
+        { name: '鉴赏' }
+      ]
+    },
+    series: [
+      {
+        type: 'radar',
+        data: [
+          {
+            value: value
+          }
+        ]
+      }
+    ]
+  }
+}
+
 Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    radar: {
+      onInit: function (canvas, width, height){
+        const barChart = echarts.init(canvas, null, {
+          width: width,
+          height: height
+        })
+        canvas.setChart(barChart)
+        barChart.setOption(getOption())
+      }
+    }
+  },
 
   getDate (key) {
-    var windowWidth = 320
-    try {
-      var res = wx.getSystemInfoSync()
-      windowWidth = res.windowWidth
-    } catch (e) {
-      console.error('getSystemInfoSync failed!')
-    }
-
-    radarChart = new wxCharts({
-      canvasId: 'radarCanvas',
-      type: 'radar',
-      categories: [
-        '1',
-        '2',
-        '3',
-        '4',
-        '5',
-        '6'
-      ],
-      series: [
-        {
-          data: [
-            90,
-            110,
-            125,
-            95,
-            87,
-            122
-          ]
-        }
-      ],
-      width: windowWidth,
-      height: 200,
-      extra: {
-        radar: {
-          max: 150
-        }
-      }
-    })
     var that = this
     var params = {
       u_id: key.uid

@@ -1,6 +1,6 @@
 <!--pages/module-read/read-analyze/read-analyze.wxml-->
 <view class="analyze">
-    <canvas canvas-id="radarCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>
+  <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ radar }}"></ec-canvas>
 </view>
 
 <view class="explain">
