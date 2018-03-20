@@ -1,5 +1,5 @@
 <!--pages/module-read/read-now/read-now.wxml-->
-<scroll-view class="list" scroll-y>
+<scroll-view class="list" scroll-y  wx:if="{{show}}">
   <view class="li" wx:for="{{list}}" wx:key="index">
     <view class="name" bindtap="openInfo" data-text="{{index}}">{{index+1}}.《{{item.b_name}}》</view>
     <view class="main" wx:if="{{open===index}}">
@@ -24,3 +24,4 @@
     </view>
   </view>
 </scroll-view>
+<view class="no-data" wx:else>暂无数据</view>

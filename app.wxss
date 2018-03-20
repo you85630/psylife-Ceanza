@@ -4,6 +4,12 @@ page {
   font-size: 0;
   position: relative;
 }
+/* 无数据 */
+.no-data{
+  font-size: 40rpx;
+  padding: 100rpx;
+  text-align: center;
+}
 /* 相关介绍 */
 .what {
   padding: 10rpx 30rpx;

@@ -1,5 +1,5 @@
 <!--pages/module-read/school-now/school-now.wxml-->
-<scroll-view class="list" scroll-y>
+<scroll-view class="list" scroll-y  wx:if="{{show}}">
   <view class="li" wx:for="{{list}}" wx:key="index">
     <view class="name" bindtap="openInfo" data-text="{{index}}">{{index+1}}.《{{item.b_name}}》</view>
     <view class="main" wx:if="{{open===index}}">
@@ -12,9 +12,6 @@
             <view><text class="msg-title">阅读量：</text>{{item.b_borrowcount}}</view>
             <view><text class="msg-title">ISBN：</text>{{item.b_isbn}}</view>
             <view class="grade">{{item.b_pingfen}}<text class="msg-title">分</text></view>
-            <view class="buy">
-              <text class="btn">点击购买</text>
-            </view>
           </view>
         </view>
         <view class="intro">
@@ -24,3 +21,4 @@
     </view>
   </view>
 </scroll-view>
+<view class="no-data" wx:else>暂无数据</view>

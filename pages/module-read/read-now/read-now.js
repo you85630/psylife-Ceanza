@@ -6,7 +6,8 @@ Page({
    */
   data: {
     open: 0,
-    list: []
+    list: [],
+    show: false
   },
   openInfo (e) {
     let Inx = e.currentTarget.dataset.text
@@ -20,8 +21,19 @@ Page({
       u_id: key.uid
     }
     app.Api('/book/getReadingBookList', params, function (res){
+      var now = res.data.data
+      var state
+      if (now) {
+        now = now
+        state = true
+      }
+      else {
+        now = []
+        state = false
+      }
       that.setData({
-        list: res.data.data
+        list: now,
+        show: state
       })
     })
   },
