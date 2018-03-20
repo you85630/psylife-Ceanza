@@ -1,48 +1,12 @@
 // pages/module-read/read-analyze/read-analyze.js
 const app = getApp()
-
-import * as echarts from '../../../ec-canvas/echarts'
-
-function getOption (value){
-  return {
-    radar: {
-      indicator: [
-        { name: '复述' },
-        { name: '解释' },
-        { name: '重整' },
-        { name: '伸展' },
-        { name: '评价' },
-        { name: '鉴赏' }
-      ]
-    },
-    series: [
-      {
-        type: 'radar',
-        data: [
-          {
-            value: value
-          }
-        ]
-      }
-    ]
-  }
-}
-
+let Chart = null
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    radar: {
-      onInit: function (canvas, width, height){
-        const barChart = echarts.init(canvas, null, {
-          width: width,
-          height: height
-        })
-        canvas.setChart(barChart)
-        barChart.setOption(getOption())
-      }
-    }
+    show: false
   },
 
   getDate (key) {
@@ -51,8 +15,32 @@ Page({
       u_id: key.uid
     }
     app.Api('/book/readAbility', params, function (res){
-      var list = res.data.data.dimension
-      console.log(list)
+      var option = {
+        radar: {
+          indicator: [
+            { name: '复述' },
+            { name: '解释' },
+            { name: '重整' },
+            { name: '伸展' },
+            { name: '评价' },
+            { name: '鉴赏' }
+          ]
+        },
+        series: [
+          {
+            type: 'radar',
+            data: [
+              {
+                value: res.data.data.dimension
+              }
+            ]
+          }
+        ]
+      }
+      that.setData({
+        radar: { options: option },
+        show: true
+      })
     })
   },
 
